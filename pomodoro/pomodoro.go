@@ -57,7 +57,7 @@ func (pomodoro *Pomodoro) NeedsUpdate() bool {
 
 func (pomodoro *Pomodoro) NextStep() Step {
 	now := time.Now()
-	nextStep := (pomodoro.Step + 1) % 2
+	nextStep := (pomodoro.Step + 1) % 3
 	pomodoro.Step = nextStep
 	pomodoro.StartedAt = &now
 	return pomodoro.Step
